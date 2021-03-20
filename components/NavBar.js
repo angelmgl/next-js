@@ -10,6 +10,24 @@ export default function NavBar() {
             <Link href="/users/[id]" as={`/users/${'x'}`}>
                 <a>User x</a>
             </Link>*/}
+
+            <style jsx>{`
+                nav {
+                    width: 100%;
+                    background-color: #4972fb;
+                    padding: 10px 0;
+                    display: flex;
+                    justify-content: center;
+                }
+                a {
+                    color: white;
+                    padding: 0 10px;
+                    text-decoration: none;
+                }
+                a:hover {
+                    color: #aaf;
+                }
+            `}</style>
         </nav>
     );
 }
