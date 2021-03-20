@@ -1,9 +1,13 @@
 import Layout from "../../components/Layout";
+import CustomHead from "../../components/CustomHead";
 import Title from "../../components/Title";
 
 export default function Post({ post }) {
     return (
         <Layout>
+            <CustomHead title={`Post #${post.id}`}
+                description={`Read the post #${post.id}`}
+                keywords={['Nextjs', 'React', 'Javascript']} />
             <Title>Post details</Title>
             <div className="card">
                 <h2>{post.title}</h2>

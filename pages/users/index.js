@@ -1,10 +1,14 @@
 import Link from "next/link";
 import Layout from "../../components/Layout";
+import CustomHead from "../../components/CustomHead";
 import Title from "../../components/Title";
 
 export default function Users({ users }) {
     return (
         <Layout>
+            <CustomHead title="Users list"
+                description="List of users on the app"
+                keywords={['Nextjs', 'React', 'Javascript']} />
             <Title>Users page</Title>
             <div className="grid">
                 {users.map((user) => {

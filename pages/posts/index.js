@@ -1,6 +1,7 @@
 //import React from 'react';
 import Link from "next/link";
 import Layout from "../../components/Layout";
+import CustomHead from "../../components/CustomHead";
 import Title from "../../components/Title";
 
 export default function Posts({ posts }) {
@@ -19,6 +20,9 @@ export default function Posts({ posts }) {
 
     return (
         <Layout>
+            <CustomHead title="Posts feed"
+                description="Read all of our posts"
+                keywords={['Nextjs', 'React', 'Javascript']} />
             <Title>Posts page</Title>
             <div className="grid">
                 {posts.map((post) => {

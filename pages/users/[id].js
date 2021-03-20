@@ -1,5 +1,6 @@
 import { useRouter } from "next/router";
 import Layout from "../../components/Layout";
+import CustomHead from '../../components/CustomHead';
 import Title from "../../components/Title";
 
 export default function User({ user }) {
@@ -12,6 +13,9 @@ export default function User({ user }) {
 
     return (
         <Layout>
+            <CustomHead title={`${user.name}`}
+                description={`This is the ${user.name}'s profile`}
+                keywords={['Nextjs', 'React', 'Javascript']} />
             <Title>User ID {user.id}</Title>
             <div className="card">
             <h3>User</h3>
