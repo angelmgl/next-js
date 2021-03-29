@@ -1,12 +1,17 @@
+import styled from "styled-components";
 import NavBar from "./NavBar";
 
+const Container = styled.div`
+    background: ${(props) => props.theme.bg};
+    color: ${(props) => props.theme.fontColor};
+    min-height: 100vh;
+`;
+
 export default function Layout({ children }) {
-    return(
-        <div>
+    return (
+        <Container>
             <NavBar />
-            <main>
-                {children}
-            </main>
+            <main>{children}</main>
 
             <style jsx>{`
                 div {
@@ -15,13 +20,6 @@ export default function Layout({ children }) {
                     display: flex;
                     flex-direction: column;
                     justify-content: center;
-                    align-items: center;
-                }
-                main {
-                    flex: 1;
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: flex-start;
                     align-items: center;
                 }
             `}</style>
@@ -35,7 +33,14 @@ export default function Layout({ children }) {
                 body {
                     font-family: Verdana;
                 }
+                main {
+                    flex: 1;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: flex-start;
+                    align-items: center;
+                }
             `}</style>
-        </div>
-    )
+        </Container>
+    );
 }

@@ -52,7 +52,7 @@ export default function Posts({ posts }) {
                         margin: 1rem;
                         flex-basis: 45%;
                         padding: 1.5rem;
-                        color: black;
+                        color: inherit;
                         text-decoration: none;
                         border: 2px solid #eaeaea;
                         border-radius: 10px;
